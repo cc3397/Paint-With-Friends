@@ -47,12 +47,12 @@ void Network::networkLoop()
 		if (playerSocket.receive(packetreceive, senderIP, senderport) != sf::Socket::Done)//receive data from other player
 		{
 			//error
-			//std::cout << "Error has occured receiving data" << std::endl;
+			std::cout << "Error has occured receiving data" << std::endl;
 			
 		}
 		else
 		{
-			//std::cout << "Connected receiving" << std::endl;
+			std::cout << "Connected receiving" << std::endl;
 		}
 		
 		if (startClock)
@@ -91,7 +91,7 @@ void Network::networkLoop()
 		if (playerSocket.send(packetsend, playerIP, port2) != sf::Socket::Done)//send position of local player over network in packet
 		{
 			//error
-			//std::cout << "Error has occured sending data" << std::endl;
+			std::cout << "Error has occured sending data" << std::endl;
 			
 		}
 		else
